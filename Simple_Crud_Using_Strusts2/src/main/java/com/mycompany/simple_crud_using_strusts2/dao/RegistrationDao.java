@@ -43,7 +43,6 @@ public class RegistrationDao {
         Connection connection = dbConnection.getConnection();
         PreparedStatement pstm = connection.prepareStatement("select * from Registration");
         ResultSet rst = pstm.executeQuery();
-        //System.out.println(rst.getObject(1));
         ArrayList<Registration> load = new ArrayList<>();
         while (rst.next()) {
             Registration registration = new Registration(
